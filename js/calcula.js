@@ -1,27 +1,26 @@
 window.onload = function() {
-  var input1 = document.getElementById("quiz1_cdados");
-  var input2 = document.getElementById("quiz2_cdados");
-  var input3 = document.getElementById("pi_cdados");
-  var resultado = document.getElementById("nota-final_cdados");
+  var input1 = document.getElementById("AP_1");
+  var input2 = document.getElementById("AC");
+  var input3 = document.getElementById("AP_2");
+  var resultado = document.getElementById("nota-final");
   
   input1.addEventListener("input", calcularResultado);
   input2.addEventListener("input", calcularResultado);
   input3.addEventListener("input", calcularResultado);
-  input4.addEventListener("input", calcularResultado);
-  input5.addEventListener("input", calcularResultado);
+
 
   initValues();
 
   function initValues() {
     
-      if(localStorage.getItem('quiz1_cdados')) {
-          input1.value = localStorage.getItem('quiz1_cdados');
+      if(localStorage.getItem('AP_1')) {
+          input1.value = localStorage.getItem('AP_1');
       } 
-      if(localStorage.getItem('quiz2_cdados')) {
-          input2.value = localStorage.getItem('quiz2_cdados');
+      if(localStorage.getItem('AC')) {
+          input2.value = localStorage.getItem('AC');
       }
-      if(localStorage.getItem('pi_cdados')) {
-        input3.value = localStorage.getItem('pi_cdados');
+      if(localStorage.getItem('AP_2')) {
+        input3.value = localStorage.getItem('AP_2');
       }
 
 
@@ -51,9 +50,9 @@ window.onload = function() {
           resultado.classList.add("verde-claro");
       }
 
-      localStorage.setItem('quiz1_cdados', input1.value);
-      localStorage.setItem('quiz2_cdados', input2.value);
-      localStorage.setItem('pi_cdados', input3.value);;
+      localStorage.setItem('AP_1', input1.value);
+      localStorage.setItem('AC', input2.value);
+      localStorage.setItem('AP_2', input3.value);;
   }
   
   calcularResultado();

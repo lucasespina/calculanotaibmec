@@ -1,49 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Calcula Nota</title>
+
+	<title>Calcula Nota Ibmec</title>
 	<link rel="stylesheet" type="text/css" href="./css/reset.css">
-	<link rel="stylesheet" type="text/css" href="./css/c_dados.css">
-	
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+
 </head>
 <body>
 	<header>
-		<h1>Ibmec</h1>
+
+		<h1 sty>Ibmec</h1>
+
 	</header>
 
 	<main>
 		<form>
 
+			<label for="AP_1">AP 1:</label>
+			<input type="number" name="AP_1" id="AP_1" step="0.01" required><br>
 
-			<label for="quiz1_cdados">AP 1:</label>
-			<input type="number" name="quiz1_cdados" id="quiz1_cdados" step="0.01" required><br>
+			<label for="AC">AC:</label>
+			<input type="number" name="AC" id="AC" step="0.01" required><br>
 
-			<label for="quiz2_cdados">AC:</label>
-			<input type="number" name="quiz2_cdados" id="quiz2_cdados" step="0.01" required><br>
+			<label for="AP_2">AP 2:</label>
+			<input type="number" name="AP_2" id="AP_2" step="0.01" required><br>
 
-			<label for="pi_cdados">AP 2:</label>
-			<input type="number" name="pi_cdados" id="pi_cdados" step="0.01" required><br>
-
-			
 			<div class="resultado">
-	
 				<h2>Nota:</h2>
-				<p id="nota-final_cdados"></p>
+				<p id="nota-final"></p>
 			</div>
 				
-			
 		</form>
-
-
-
 	</main>
 
-    <script type="text/javascript" src="./js/cdados.js"></script>
+    <script type="text/javascript" src="./js/calcula.js"></script>
 
 </body>
+
 </html>
-
-
-</body>
 
 </html>
