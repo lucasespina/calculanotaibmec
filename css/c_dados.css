@@ -1,0 +1,247 @@
+:root {
+    --primary-color: #2117e8;
+    --secondary-color: #000000;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  header {
+    display: flex;
+    align-items: center; /* This centers the children vertically */
+    justify-content: center; /* This centers the children horizontally */
+    position: relative; /* This allows the back button to be positioned relative to the header */
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px;
+    width: 100%;
+    height: 100px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    font-size: 40px;
+    text-shadow: black 0.10em 0.1em 0.2em;
+    z-index: 1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .back-button {
+    position: absolute;
+    left: 10px; /* ou qualquer outro valor que você deseja para ajustar horizontalmente */
+    top: -20%; /* centraliza o botão verticalmente */
+    transform: translateY(-50%); /* ajusta a posição vertical baseada no próprio tamanho do botão */
+    background: url('https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-back-512.png') no-repeat center center;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    background-color: #f9f9f9;
+  }
+  
+  
+  .buttons-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  button {
+    margin: 20px;
+    padding: 30px 60px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 100px;
+  }
+  
+  button:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  
+  .resultado {
+
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    }
+      
+  .resultado h2{
+  order: 1;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 50px;
+  display: inline-block;
+  }
+  
+  .resultado p{
+  order: 2;
+  font-size: 50px;
+  font-weight: bold;
+  display: inline-block;
+  
+  }
+  
+  span {
+  display: block;
+  font-size: 30px;
+  margin-left: 20px; /* adiciona a margem esquerda */
+  font-family: bold;
+  }
+  
+  
+  .vermelho {
+  color: red;
+  }
+  
+  .verde-claro {
+  color:rgb(56, 120, 56);
+  }
+  
+  .laranja { 
+  color: orange;
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .buttons-container {
+      padding: 10px;
+      height: 100vh;
+    }
+  
+    button {
+      font-size: 40px;
+      padding: 20px 40px;
+      margin: 10px;
+      width: 90%;
+      max-width: 400px;
+    }
+  
+    header {
+      font-size: 24px;
+    }
+  
+    .main-container {
+      margin-top: 50px;
+      font-size: 24px;
+    }
+  }
+  
+  input[type="number"] {
+    margin: 20px;
+    padding: 50px;
+    background-color: #f9f9f9;
+    border: 2px solid #707070;
+    border-radius: 5px;
+    font-size: 50px;
+    font-weight: 700;
+    text-align: center;
+    transition: all 0.3s ease;
+    width: 60%;
+    max-width: 400px;
+  }
+  
+  input[type="number"]:hover,
+  input[type="number"]:focus {
+    background-color: #f1f1f1;
+    outline: none;
+    border-color: var(--primary-color);
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    max-width: 400px;
+  }
+  
+  form label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 100%;
+    color: #000000;
+    font-weight: bold;
+    font-size: 35px;
+    margin-top: 30px;
+  }
+  
+  form input[type="number"] {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    font-size: 50px;
+  }
+
+  
+  
+  /* Modificações para o iPhone 12 Pro */
+  
+  @media only screen 
+  and (device-width: 428px) 
+  and (device-height: 926px) 
+  and (-webkit-device-pixel-ratio: 3) { 
+  /* Ajuste o tamanho do header */
+  header {
+  font-size: 50px;
+  padding: 15px;
+  }
+  
+  /* Ajuste o tamanho dos botões */
+  .buttons-container {
+  padding: 10px;
+  }
+  
+  button {
+  margin: 10px;
+  padding: 20px 40px;
+  font-size: 40px;
+  max-width: 350px;
+  }
+  
+  /* Ajuste o tamanho do formulário */
+  form {
+  margin-top: 30px;
+  max-width: 350px;
+  }
+  
+  form label {
+  margin-bottom: 10px;
+  font-size: 10px;
+  }
+  
+  form input[type="number"] {
+  margin: 5px 0;
+  padding: 10px;
+  font-size: 20px;
+  }
+    
+
+  /* Ajuste o tamanho do resultado */
+
+  }

@@ -1,0 +1,118 @@
+/* Definição das cores personalizadas */
+:root {
+    --primary-color: #000cf4; /* Cor primária */
+    --secondary-color: #000000; /* Cor secundária */
+}
+
+/* Estilos básicos para o HTML e o body */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para o body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px; /* Espaço para o header */
+}
+
+/* Estilos para o header */
+header {
+    background-color: var(--primary-color); /* Cor de fundo usando a cor primária */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    position: fixed; /* Fixa o header no topo */
+    top: 0;
+    left: 0;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+    font-size: 70px;
+    text-shadow: black 0.10em 0.1em 0.2em;
+    z-index: 1; /* Garante que o header fique acima de outros conteúdos */
+}
+
+/* Estilos para o container dos botões */
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+    transition: all 0.3s ease;
+}
+
+/* Estilos para os botões */
+button {
+    padding: 20px 30px;
+    background-color: var(--primary-color); /* Cor de fundo usando a cor primária */
+    color: white;
+    border: 1px solid black;
+    border-radius: 30px;
+    font-size: 50px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 90%;
+}
+
+/* Estilos para o hover nos botões */
+button:hover {
+    background-color: white;
+    color: var(--primary-color); /* Cor do texto usando a cor primária */
+    transform: translate(0, -5px);
+}
+
+/* Media query para dispositivos com largura máxima de 768px */
+@media screen and (max-width: 768px) {
+    body {
+        padding-top: 10px; /* Espaço menor para o header em dispositivos móveis */
+    }
+}
+
+/* Media query para dispositivos com largura entre 769px e 1366px */
+@media (min-width: 769px) and (max-width: 1366px) {
+    .buttons-container {
+        padding-bottom: 50%; /* Espaçamento inferior menor */
+        flex-direction: row; /* Altera a direção dos botões para horizontal */
+        flex-wrap: wrap; /* Permite que os botões quebrem para a próxima linha */
+    }
+
+    button {
+        padding: 30px 40px; /* Espaçamento interno menor nos botões */
+    }
+}
+
+/* Media query para dispositivos com largura mínima de 1367px */
+@media (min-width: 1367px) {
+    .buttons-container {
+        flex-direction: row; /* Altera a direção dos botões para horizontal */
+        flex-wrap: wrap; /* Permite que os botões quebrem para a próxima linha */
+    }
+
+    button {
+        padding: 40px 60px; /* Espaçamento interno maior nos botões */
+    }
+}
+
+.back-button {
+    position: absolute;
+    left: 10px; /* ou qualquer outro valor que você deseja para ajustar horizontalmente */
+    top: 50%; /* centraliza o botão verticalmente */
+    transform: translateY(-50%); /* ajusta a posição vertical baseada no próprio tamanho do botão */
+    background: url('https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-back-512.png') no-repeat center center;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    background-color: #f9f9f9;
+  }
